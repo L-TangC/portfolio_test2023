@@ -1,0 +1,625 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+}
+ol, ul {
+	list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+ 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+*,*::before,*::after{
+box-sizing: border-box;
+}
+a, p, h1, h2, h3{
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color:aliceblue;
+}
+
+body{
+    background-color: #0f1527;
+}
+
+/* header start */
+header{
+    max-width: 100%;
+    height: auto;
+    clip-path: polygon(0 0, 100% 0,100% 100%, 0 50%);
+    background-color: #07112ab1;
+    backdrop-filter: blur(2px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    width: calc(100%);
+    padding: 16px;
+    z-index: 100;
+}
+.header_logo img{
+    width: 120px;
+}
+.header_meun{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+.header_meun a{
+    color:aliceblue;
+    margin: 4px;
+}
+.header_meun a:hover{
+    color:rgb(224, 195, 89);
+}
+.header_meun .active{
+    color:rgb(224, 195, 89);
+    font-weight: 700;
+}
+
+.header_title h1{
+    font-size: 24px;
+    vertical-align: middle;
+    padding-top: 15px;
+}
+/* header end */
+
+
+/* Contact popout start */
+.contact{
+    text-align: center;
+    display:none;
+    max-width: 500px;
+    padding: 30px 50px;
+    background:#121930;
+    box-shadow:5px 5px 10px #42464b4b;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 100;
+    top:50%;
+    left:50%; 
+    margin-left:-100px;
+    margin-top:-140px;
+    color:#42464b;
+    position:fixed;
+    z-index: 101;
+}
+.contact h2{
+    font-size: 28px;
+    margin-bottom:15px;
+    font-weight: bold;
+}
+.contact .box{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:10px;
+}
+.contact h3{
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.contact .box a{
+    font-size: 12px;
+    margin-bottom: 15px;
+    font-weight: 100;
+}
+.contact img{
+    width: 25px;
+}
+.contact .linedin-icon{
+    width: 28px;
+}
+.cancel{
+    margin-top:30px;
+    font-size: 12px;
+}
+.cancel .cancel_buttom{
+    padding:5px 10px;
+    background: #8795a7;
+    color:#363a4c;
+    border-radius: 5px;
+}
+.cancel .cancel_buttom:hover{
+    background: #020305;
+    color:#ffffff;
+}
+
+.shade{
+    display: none;
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    background:black;
+    opacity: 0.6;
+    z-index: 100;
+}
+/* Contact popout end */
+
+/* info background start */
+.homePage_bg, .vtuber_bg, .physioApp_bg, .rugbbit_bg, .w2e_bg{
+    text-align: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    padding: 240px;
+    clip-path: polygon(0 0, 100% 0,100% 100%, 0 87%);
+}
+.info p{
+    font-size: 16px;
+    color:aliceblue;
+    margin: 15px 0px;
+}
+.info h1{
+    font-size: 32px;
+    color:aliceblue;
+    text-shadow: 3px 3px 5px #202020b3;
+    font-weight: 600;
+}
+.info span{
+    color:#fae611;
+    font-weight: 800;
+}
+.scroll_icon{
+    text-align: center;
+}
+.scroll_icon img{
+    width: 15px;
+}
+/* info background end */
+
+/* footer start */
+.top{
+    text-align: center;
+    margin: 120px 0 20px 0;
+}
+.top a{
+    color: #e3e8f4b1;
+    text-decoration:underline;
+}
+.footer{
+    background-color: #030a20;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    padding: 5% 2% 1% 2%;
+    clip-path: polygon(0 0, 100% 20%,100% 100%, 0 100%);
+}
+.footer .name{
+    font-size: 28px;
+    font-weight: 800;
+}
+.footer .menu h2{
+    font-size: 24px;
+    font-weight: 600;
+}
+.footer .menu li{
+    font-size: 12px;
+    margin: 10px 0px;
+}
+.footer .social{
+    text-align: right;
+}
+.footer .social h2{
+    font-size: 20px;
+    font-weight: 600;
+}
+.footer .social img{
+    max-width: 40px;
+    margin-top: 10px;
+}
+/* footer end */
+
+/* homePage start */
+
+.homePage_bg{
+    background-image: url(../images/homePage/IMG_5594_Original.jpeg);
+}
+.content{
+    text-align: center;
+    margin:60px 0px;
+}
+.exp{
+    margin-bottom:60px;
+}
+.exp h1{
+    font-size: 32px;
+    font-weight: bolder;
+    margin:12px 0px;
+}
+.exp_list{
+    display: flex;
+    justify-content: center;
+    margin: 24px 0px;
+}
+.exp_item{
+    width: 20%;
+}
+.exp_item h2{
+    font-size: 24px;
+    font-weight: 500;
+    margin:10px 0px;
+}
+.exp_item p{
+    font-size: 16px;
+    font-weight:lighter;
+    color: rgb(160, 190, 216);
+}
+.exp_item .time p{
+    font-size: 12px;
+    margin:10px 0px;
+}
+.project_list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 60px 0px;
+}
+.project_list h1{
+    font-size: 32px;
+    font-weight: 800;
+    margin:12px 0px;
+    text-shadow: 0px 0px 5px #272727d0;
+    color: #ffffff;
+}
+.project_list p{
+    text-shadow: 0px 0px 3px #272727d0;
+    color: #ffffff;
+    font-weight: 500;
+}
+.project01, .project02, .project03, .project04, .project05, .project06, .project07, .project08, .project09, .project10, .project11, .project12{
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 80%;
+    width:80%;
+    padding: 16%;
+    margin:30px 0px;
+    border-radius:10px 10px;
+}
+.project01:hover, .project02:hover, .project03:hover, .project04:hover, .project05:hover, .project06:hover, .project07:hover, .project08:hover, .project09:hover, .project10:hover, .project11:hover, .project12:hover{
+    background-size: 82%;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.project01{
+    background-image: url(../images/homePage/w_live_info.png);
+}
+.project02{
+    background-image: url(../images/homePage/App_ps.png);
+}
+.project03{
+    background-image: url(../images/homePage/cryptoCoin_mint.png);
+}
+.project04{
+    background-image: url(../images/homePage/w2e_banner.png);
+}
+.project05{
+    background-image: url(../images/homePage/NFT_Mint.png);
+}
+.project06{
+    background-image: url(../images/homePage/offical_web.jpg);
+}
+.project07{
+    background-image: url(../images/homePage/moodapp.jpg);
+}
+.project08{
+    background-image: url(../images/homePage/psyxhologicalTest.png);
+}
+.project09{
+    background-image: url(../images/homePage/physiothrapy_CMS.jpg);
+}
+.project10{
+    background-image: url(../images/homePage/skinAna.jpg);
+}
+.project11{
+    background-image: url(../images/homePage/yueda1.jpg);
+}
+.project12{
+    background-image: url(../images/homePage/podcast1.jpg);
+}
+.contactMe{
+    width: 80%;
+    background-image: url(../images/homePage/smash.jpeg);
+    filter: brightness(90%);
+}
+.contactMe p{
+    padding: 5%;
+    color:#fae611;
+    font-weight: 800;
+    font-size: 32px;
+}
+/* homePage start */
+
+/* project style start */
+.project_title{
+    font-size: 32px;
+    font-weight: 800;
+}
+.type01{
+    margin:120px 0px;
+    padding: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+.type01 h1{
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.type01 p{
+    font-weight: 400;
+    color: rgb(172, 187, 199);
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+.type01 span{
+    font-size: 16px;
+    font-weight: 600;
+    color: aliceblue;
+}
+.type01_box{
+    width: 45%;
+}
+.type01_box span{
+    font-size: 12px;
+}
+.type01 ul{
+    font-weight: 400;
+    color: rgb(172, 187, 199);
+    font-size: 12px;
+    line-height: 20px;
+    padding: 0px 0px 0px 3%;
+}
+.type01 .download_btn{
+    margin-top: 60px;
+}
+.type01 a{
+    border: 1px  solid aliceblue;
+    background: aliceblue;
+    padding: 5px 8px;
+    color: #0f1527;
+    border-radius: 5px;
+}
+.type01 a:hover{
+    background: #0f1527;
+    color:aliceblue;
+    -webkit-transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    -o-transition: all 0.1s ease-out;
+    -ms-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
+}
+.type02{
+    margin:120px 0px;
+    padding:0 10%;
+}
+.type02 h1{
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.type03{
+    margin:120px 0px;
+    padding:0 10%;
+    text-align: left;
+
+}
+.type03 h1{
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.type03 p{
+    font-weight: 400;
+    color: rgb(172, 187, 199);
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+.type03 span{
+    font-size: 16px;
+    font-weight: 600;
+    color: aliceblue;
+}
+.type03 ul{
+    font-weight: 400;
+    color: rgb(172, 187, 199);
+    font-size: 12px;
+    line-height: 20px;
+    padding: 0px 0px 0px 3%;
+}
+.type04{
+    margin:120px 0px;
+    padding: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+.type04_box{
+    width: 22%;
+}
+.contactMe_bottom{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 60px 0px;
+}
+.contactMe_bottom .test::before {
+    content: "Contact Me";
+    font-size: 20px;
+    margin-bottom: 20px;
+    color:aliceblue;
+    border: solid 1px aliceblue;
+    background-color: #030a20;
+    box-shadow: 5px 5px 0px aliceblue;
+    padding: 12px;
+    border-radius: 10px;
+}
+.contactMe_bottom a{
+    margin: 10px;
+    border: 1px solid #00000000;
+    background: none;
+}
+.contactMe_bottom .test:hover::before{
+    width: 12%;
+    box-shadow: 0px 0px 0px aliceblue;
+    background-color: aliceblue;
+    color:#030a20;
+    -webkit-transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    -o-transition: all 0.1s ease-out;
+    -ms-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
+    content: "Thats Do It!!";
+}
+/* project style  end */
+
+/* slide tag start */
+.slideTag{
+    position: fixed;
+    padding: 10px;
+    background: #70707013;
+    border-radius: 10px;
+    top: 30%;
+    left: 20px;
+}
+.slideTag li{
+    margin:8px 0px;
+}
+.slideTag a{
+    color:rgba(240, 248, 255, 0.115);
+    font-size: 12px;
+}
+.slideTag:hover{
+    background: #7070702e;
+}
+.slideTag a:hover{
+    color:rgba(240, 248, 255, 0.7);
+    font-size: 12px;
+}
+/* slide tag end */
+
+/* vtuber start */
+.vtuber_bg{
+    background-image: url(../images/vtuber/w_live_info.png);
+}
+/* vtuber end */
+
+/* physiotherapy_app start */
+.physioApp_bg{
+    background-image: url(../images/physiotherapy_app/App_ps.png);
+}
+/* physiotherapy_app end */
+
+/* rugbbit start */
+.rugbbit_bg{
+    background-image: url(../images/rugbbit/cryptoCoin_mint.png);
+}
+/* rugbbit end */
+
+/* W2E start */
+.w2e_bg{
+    background-image: url(../images/w2e/w2e_banner.png);
+
+}
+/* W2E end */
+
